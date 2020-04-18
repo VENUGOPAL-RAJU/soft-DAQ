@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DEE5B0A-F6F1-41EC-B1D0-1CC34C6B32B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoftDAQ_Application</RootNamespace>
+    <AssemblyName>SoftDAQ Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>obj\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.31.1789.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnalysisWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalysisWindow.Designer.cs">
+      <DependentUpon>AnalysisWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalibrationWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalibrationWindow.Designer.cs">
+      <DependentUpon>CalibrationWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreatePrj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatePrj.Designer.cs">
+      <DependentUpon>CreatePrj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExportWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportWindow.Designer.cs">
+      <DependentUpon>ExportWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main Window.designer.cs">
+      <DependentUpon>Main Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Measurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Measurement.Designer.cs">
+      <DependentUpon>Measurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfflineWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfflineWindow.Designer.cs">
+      <DependentUpon>OfflineWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OnlineDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlineDisplay.designer.cs">
+      <DependentUpon>OnlineDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportGeneration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportGeneration.Designer.cs">
+      <DependentUpon>ReportGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetupConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetupConfiguration.Designer.cs">
+      <DependentUpon>SetupConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestRun.Designer.cs">
+      <DependentUpon>TestRun.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AnalysisWindow.resx">
+      <DependentUpon>AnalysisWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalibrationWindow.resx">
+      <DependentUpon>CalibrationWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreatePrj.resx">
+      <DependentUpon>CreatePrj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportWindow.resx">
+      <DependentUpon>ExportWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main Window.resx">
+      <DependentUpon>Main Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Measurement.resx">
+      <DependentUpon>Measurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfflineWindow.resx">
+      <DependentUpon>OfflineWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlineDisplay.resx">
+      <DependentUpon>OnlineDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportGeneration.resx">
+      <DependentUpon>ReportGeneration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetupConfiguration.resx">
+      <DependentUpon>SetupConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestRun.resx">
+      <DependentUpon>TestRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Analysis_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calibarion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data _Acquire-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-calibration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-export.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Offline_Window.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-tables-Accunts - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imgpsh_fullsize_anim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Export.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
